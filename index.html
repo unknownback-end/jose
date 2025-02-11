@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¡Feliz Cumpleaños!</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #ffccf5;
+            text-align: center;
+            padding: 50px;
+        }
+
+        h1 {
+            color: #d6336c;
+            font-size: 3em;
+        }
+
+        .button {
+            background-color: #ff6f61;
+            color: white;
+            padding: 15px 30px;
+            font-size: 1.5em;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .button:hover {
+            transform: scale(1.1);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .button:active {
+            transform: scale(0.95);
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Recordando a José Pizarro 🌹</h1>
+    <h2>Hoy no solo celebramos su vida, sino el amor y las memorias que dejó en cada uno de nosotros. Su sonrisa, su
+        fuerza y su espíritu vivirán para siempre en nuestros corazones.</h2>
+
+    <!-- Botón con efecto y enlace -->
+    <button class="button" onclick="playSongAndOpenPage()">Empezar</button>
+
+    <!-- Audio oculto para reproducir la canción -->
+    <audio id="birthdaySong" src="img/musica.mp3" loop></audio>
+
+    <script>
+        function playSongAndOpenPage() {
+            // Reproducir la canción
+            const song = document.getElementById('birthdaySong');
+            song.play();
+
+            // Abrir la segunda página en una nueva pestaña o ventana
+            window.open("./ruleta.html", "_blank");
+        }
+    </script>
+</body>
+
+</html>
